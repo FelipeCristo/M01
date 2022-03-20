@@ -10,7 +10,8 @@ let pontoPlayer = 0;
 let continuar = 'sim'
 
 do{
-    let rodadas = +prompt('rodadas: ');
+      let rodadas = +prompt('rodadas: ');
+      console.clear();
 console.log(`Olá ${nomeJogador} nós vamos jogar ${rodadas} rodadas`);
 for (let i = 0; i < rodadas; i++){
     let pcEscolha = ppt [Math.floor(Math.random() * ppt.length)] 
@@ -50,12 +51,8 @@ for (let i = 0; i < rodadas; i++){
      
 
 }
-continuar = prompt('Vamos Jogar de Novo?');
-     continuar = continuar.toLowerCase();
 
-}while ( continuar === "sim");
-
-console.log(`Pontuação final ficou assim:\n Seus pontos:${pontoPlayer} \n Pontuação do Computador: ${pontoPC}`);
+console.log(`Pontuação final ficou assim:\n Sua pontuação:${pontoPlayer} \n Pontuação do Computador: ${pontoPC}`);
 if (pontoPlayer > pontoPC){
     console.log('Parabens você gahou o jogo');
 }else if(pontoPlayer < pontoPC){
@@ -63,3 +60,10 @@ if (pontoPlayer > pontoPC){
 }else{
     console.log('legal você impatou com uma maquina');
 }
+
+continuar = prompt('Vamos Jogar de Novo?');
+     continuar = continuar.toLowerCase();
+
+}while ( continuar === "sim");
+
+
