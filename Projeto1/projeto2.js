@@ -45,10 +45,13 @@ for (let i = 0; i < rodadas; i++){
      }else if (ppt[jogEscolha] === 'tesoura' && pcEscolha === 'papel'){
         console.log('voce Ganhou');
         pontoPlayer++;
-     } continuar = prompt('Vamos Jogar de Novo?');
-     continuar = continuar.toLowerCase();
+     } 
+     
+     
 
 }
+continuar = prompt('Vamos Jogar de Novo?');
+     continuar = continuar.toLowerCase();
 
 }while ( continuar === "sim");
 
