@@ -4,14 +4,13 @@ console.clear();
 let nomeJogador = prompt('Qual o seu nome? ');
 const ppt = ['pedra', 'papel', 'tesoura'];
 
-
-let pontoPC = 0;
-let pontoPlayer = 0;
 let continuar = 'sim'
 
 do{
-      let rodadas = +prompt('rodadas: ');
-      console.clear();
+    let pontoPC = 0;
+    let pontoPlayer = 0;
+    let rodadas = +prompt('rodadas: ');
+    console.clear();
 console.log(`Olá ${nomeJogador} nós vamos jogar ${rodadas} rodadas`);
 for (let i = 0; i < rodadas; i++){
     let pcEscolha = ppt [Math.floor(Math.random() * ppt.length)] 
