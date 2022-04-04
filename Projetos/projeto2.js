@@ -35,12 +35,12 @@ for (let i = 0; i < rodadas; i++){
         pontoPlayer++;
 
      } else if  (ppt[jogEscolha] === 'papel'  && pcEscolha ===  'tesoura'){
-         console.log('você perdeu');
-         pontoPC++;
+        console.log('você perdeu');
+        pontoPC++;
 
      } else if  (ppt[jogEscolha] === 'tesoura' && pcEscolha === 'pedra' ){
-         console.log('voce perdeu');
-         pontoPC++;
+        console.log('voce perdeu');
+        pontoPC++;
            
      }else if (ppt[jogEscolha] === 'tesoura' && pcEscolha === 'papel'){
         console.log('voce Ganhou');
