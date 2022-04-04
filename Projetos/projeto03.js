@@ -394,7 +394,7 @@ function continuar(){
 
 //let reiniciar=[];
 function escolhas(){
-    
+  
     if (plantacaoEfazenda.areaLivre.length == 0 && plantacaoEfazenda.sementes == 0){
         
         console.log(`\nQual tarefa quer realizar agora? (digite o numero da resposta)
@@ -418,6 +418,7 @@ function escolhas(){
         console.log(`você pegou ${randFrutas} frutas!\n `);
         colher.frutas += randFrutas
         fazendeiro.dormir();
+        fazendeiro.exibir();
 
         }else if (resposta1 === 2){
             fazendeiro.estamina -= 40;
@@ -427,6 +428,7 @@ function escolhas(){
             plantacaoEfazenda.areaLivre.push('')
             console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`);
             fazendeiro.dormir();
+            fazendeiro.exibir();
 
         }else if (resposta1 === 3){
             fazendeiro.estamina -= 30;
@@ -437,6 +439,7 @@ function escolhas(){
             tempo.passaTempo(2);
             tempo.exibeTempo();
             fazendeiro.dormir();
+            fazendeiro.exibir();
 
         }else if (resposta1 === 4){
         fazendeiro.estamina -= 30;
@@ -447,7 +450,8 @@ function escolhas(){
         let randsementes = Math.floor(Math.random() * 2);
         plantacaoEfazenda.sementes += randsementes;
         console.log(`Você pegou ${randsementes} sementes\n`);                 
-   
+        fazendeiro.exibir();
+
         }else if (resposta1 === 5){
             tempo.passaTempoDormir(1);
         
@@ -459,7 +463,7 @@ function escolhas(){
 
 
     }else if (plantacaoEfazenda.areaLivre.length >= 1 && plantacaoEfazenda.sementes >= 1){
-        
+       
             console.log(`\nQual tarefa quer realizar agora? (digite o numero da resposta)
         1 - Colher Frutas das arvoras próximas (-15 estamina, -15 fome, passa 3 horas)
         2 - Preparar solo em uma area 1m x 1m para plantar (-20 estamina, - 30 fome, passa 4 horas) 
@@ -481,6 +485,7 @@ function escolhas(){
             let randFrutas = Math.floor(Math.random() * 6) +1
             console.log(`você pegou ${randFrutas} frutas!\n `);
             colher.frutas += randFrutas
+            fazendeiro.exibir();
 
         }else if (resposta2 === 2){
             fazendeiro.estamina -= 40;
@@ -490,7 +495,7 @@ function escolhas(){
             fazendeiro.dormir();
             plantacaoEfazenda.areaLivre.push('')
             console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`);
-            
+            fazendeiro.exibir();
             
     
         }else if (resposta2 === 3){
@@ -502,6 +507,7 @@ function escolhas(){
             let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
             plantacaoEfazenda.madeira += cortarMadeira;
             console.log(`você pegou ${cortarMadeira} madeiras!\n`);
+            fazendeiro.exibir();
 
         }else if (resposta2 === 4){
             fazendeiro.estamina -= 30;
@@ -512,7 +518,7 @@ function escolhas(){
             let randsementes = Math.floor(Math.random() * 2);
             plantacaoEfazenda.sementes = plantacaoEfazenda.sementes + randsementes;
             console.log(`Você agora tem ${randsementes} sementes para plantantar\n`);  
-        
+            fazendeiro.exibir();
 
         }else if (resposta2 === 5 ){
             fazendeiro.estamina -= 25;
@@ -524,6 +530,7 @@ function escolhas(){
            plantacaoEfazenda.areaLivre.shift()
             plantacaoEfazenda.plantar();
             tempo.semente(tempo.dia);
+            fazendeiro.exibir();
 
 
             //COLOCAR PARA COLHER EM 5 DIAS
@@ -543,7 +550,7 @@ function escolhas(){
 
         
         }else if (plantacaoEfazenda.areaLivre.length >= 1 || plantacaoEfazenda.sementes >= 1){
-        
+ 
         console.log(`\nQual tarefa quer realizar agora? (digite o numero da resposta)
         1 - Colher Frutas das arvoras próximas (-15 estamina, -15 fome, passa 3 horas)
         2 - Preparar solo em uma area 1m x 1m para plantar (-20 estamina, - 30 fome, passa 4 horas) 
@@ -562,11 +569,10 @@ function escolhas(){
             tempo.passaTempo(3);
             tempo.exibeTempo();
             fazendeiro.dormir();
-            fazendeiro.exibir();
         let randFrutas = Math.floor(Math.random() * 5) +1
         console.log(`você pegou ${randFrutas} frutas! \n`);
         colher.frutas += randFrutas
-
+        fazendeiro.exibir();
 
         }else if (resposta3 === 2){
             fazendeiro.estamina -= 40;
@@ -574,9 +580,9 @@ function escolhas(){
             tempo.passaTempo(5);
             tempo.exibeTempo();
             fazendeiro.dormir();
-            fazendeiro.exibir();
             plantacaoEfazenda.areaLivre.push('')
             console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`);
+            fazendeiro.exibir();
 
         }else if (resposta3 === 3){
             fazendeiro.estamina -= 30;
@@ -586,19 +592,19 @@ function escolhas(){
         console.log(`você pegou ${cortarMadeira} madeiras!\n `);
             tempo.passaTempo(2);
             tempo.exibeTempo();
-            fazendeiro.exibir();
             fazendeiro.dormir();
+            fazendeiro.exibir();
 
         }else if (resposta3 === 4){
         fazendeiro.estamina -= 30;
         fazendeiro.fome -= 25;
         tempo.passaTempo(2);
         tempo.exibeTempo();
-        fazendeiro.exibir();
         fazendeiro.dormir();
         let randsementes = Math.floor(Math.random() * 2);
         plantacaoEfazenda.sementes += randsementes;
-        console.log(`Você pegou ${randsementes} sementes\n`);                 
+        console.log(`Você pegou ${randsementes} sementes\n`);
+        fazendeiro.exibir();                 
    
         }else if (resposta3 === 5){
             tempo.passaTempoDormir(1);
@@ -613,7 +619,6 @@ function escolhas(){
  
     
     if(plantacaoEfazenda.madeira >=10){
-    
     console.log(`\nQual tarefa quer realizar agora? (digite o numero da resposta)
     1 -	Consertar a cerca (-20 estamina, - 20 fome, -10 madeiras,  + 4 horas)
     2 -	Cortar e limpar grama da área em volta da casa  em uma área 1m x 1m  (-30 estamina, - 25 fome, passa 2 horas)
@@ -629,10 +634,10 @@ function escolhas(){
         tempo.passaTempo(4);
         tempo.exibeTempo();
         fazendeiro.dormir();
-        fazendeiro.exibir();
         plantacaoEfazenda.madeira -=10;
         plantacaoEfazenda.
         console.log(`Você gastou 10 madeiras para concertar a cerca\n`);
+        fazendeiro.exibir();
 
         }else if(resposta4 === 2){
         fazendeiro.estamina -= 30;
@@ -640,10 +645,10 @@ function escolhas(){
         tempo.passaTempo(2);
         tempo.exibeTempo();
         fazendeiro.dormir();
-        fazendeiro.exibir();
         let randsementes = Math.floor(Math.random() * 2);
         plantacaoEfazenda.sementes += randsementes
-        console.log(`Você agora tem ${randsementes} sementes para plantantar\n`); 
+        console.log(`Você agora tem ${randsementes} sementes para plantantar\n`);
+        fazendeiro.exibir();
 
         }else if (resposta4 === 3){
         fazendeiro.estamina -= 30;
@@ -651,11 +656,11 @@ function escolhas(){
         tempo.passaTempo(2);
         tempo.exibeTempo();
         fazendeiro.dormir();
-        fazendeiro.exibir();
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         console.log(`você pegou ${cortarMadeira} madeiras! \n`);
         plantacaoEfazenda.madeira += cortarMadeira;
         tempo.passaTempo(2);
+        fazendeiro.exibir();
 
         }else if (resposta4 === 4){
         fazendeiro.estamina -= 40;
@@ -663,9 +668,9 @@ function escolhas(){
         tempo.passaTempo(5);
         tempo.exibeTempo();
         fazendeiro.dormir();
-        fazendeiro.exibir();
         plantacaoEfazenda.areaLivre.push('')
         console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`)
+        fazendeiro.exibir();
         
         }else if (resposta4 === 5){
         tempo.passaTempoDormir(1);
@@ -677,7 +682,6 @@ function escolhas(){
     
 
     }else if(plantacaoEfazenda.madeira >= 50){
-
         
         console.log(`\nQual tarefa quer realizar agora? (digite o númeroda resposta)
         1 -	Consertar a cerca (-20 estamina, - 20 fome, + 4 horas)
@@ -686,7 +690,6 @@ function escolhas(){
         4 - Cortar e Retirar Arvores Caidas (-40 estamina, -40 fome, passa 5 horas)
         5 - Dormir
         6 - Comer      
-        
         \n`)
 
         let resposta5 = +prompt(`Nº: `);
@@ -696,10 +699,11 @@ function escolhas(){
             tempo.passaTempo(4);
             tempo.exibeTempo();
             fazendeiro.dormir();
-            fazendeiro.exibir();
+            
             plantacaoEfazenda.madeira -=10;
             plantacaoEfazenda.cercaQuebrada -= 1;
             console.log(`Você gastou 10 madeiras para concertar a cerca\n`);
+            fazendeiro.exibir();
     
         }else if(resposta5 === 2){
             fazendeiro.estamina -= 60;
@@ -707,12 +711,12 @@ function escolhas(){
             tempo.passaTempo(10);
             tempo.exibeTempo();
             fazendeiro.dormir();
-            fazendeiro.exibir();
                 if(plantacaoEfazenda.cabanaConcerto >= 0){
                 plantacaoEfazenda.cabanaConcerto -= 1;
                 console.log(`Você concertou a cabana, falta agora ${plantacaoEfazenda.cabanaConcerto} reparos a ser feito\n`);
                 }else if(plantacaoEfazenda.cabanaConcerto == 0){
                     console.log(`PAREBENS SUA CASA ESTA PRONTA E LINDA, não precisa de reparos\n`);
+                    fazendeiro.exibir();
                 }
 
              
@@ -724,10 +728,10 @@ function escolhas(){
             tempo.passaTempo(3);
             tempo.exibeTempo();
             fazendeiro.dormir();
-            fazendeiro.exibir();
         let randFrutas = Math.floor(Math.random() * 5) +1
         console.log(`você pegou ${randFrutas} frutas! `);
         colher.frutas += randFrutas
+        fazendeiro.exibir();
 
         }else if (resposta5 === 4){
             fazendeiro.estamina -= 30;
