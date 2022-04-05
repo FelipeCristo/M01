@@ -164,7 +164,7 @@ let tempo = {
     },
 
     semente: function (){
-        for (i = 0; i < plantacaoEfazenda.areaLivre.length; i++){
+        for (let i = 0; i < plantacaoEfazenda.areaLivre.length; i++){
         //plantacao = plantacao
         plantacao = plantacaoEfazenda.areaLivre[i]
 
@@ -471,6 +471,7 @@ function escolhas(){
         4 - Cortar e limpar grama da área em volta da casa (-30 estamina, - 25 fome, passar 2 horas)
         5 - Plantar Semente na Área livre (-25 estamina, - 25 fome, passar 2 horas)
         6 - Dormir
+        7 - Comer
         \n`);
         
         let resposta2 = +prompt(`Nº: `);
@@ -543,7 +544,7 @@ function escolhas(){
          }else if (resposta2 === 6){
             tempo.passaTempoDormir(1);
         
-        }else if(resposta2 === 6){
+        }else if(resposta2 === 7){
             colher.comer();
             }
     
