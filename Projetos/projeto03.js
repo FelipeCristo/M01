@@ -54,8 +54,7 @@ continuar();
 console.log(`\nUma fazenda que seu avô tinha comprado quando novo.\n\n\tDepois de muitas horas 
 de viajem você finalmente chega e se depara com um lugar com aparência de abandonado. A grama em alguns
 lugares esta tão alta que se pode esconder um trator lá. A “charmosa” casa de campo que achou haveria, 
-parece mais que é um barraco de ferramentas caindo aos pedaços. A cerca está quebrada, o poço 
-precisa de reparos, a grama tem que ser aparada. 
+parece mais que é um barraco de ferramentas caindo aos pedaços. A cerca está quebrada, \na grama tem que ser aparada, ha muita limpeza a ser feita no terreno e é claro, reparar a sua casa para ela ficar do seu jeito. 
 Há para todo lado galhos de arvores, troncos, arvores caídas e lixo espalhado por todo o solo onde
 deveria ter uma plantacao.\n\t`)
 
@@ -73,12 +72,10 @@ que antes pertenciam ao seu avô. Tudo que iria precisar para realizar o seu tra
 
 continuar();
 
-console.log(`\n\n\tE é aqui que começamos sua nova vida;\n\nBreve tutorial:\n\nSTATUS\n\n\tFOME: Ao passar do dia e fazendo suas atividades diárias você vai ficando com fome. Se esse status 
-chegar a Zero você perde. Mas não se preocupe, tudo que precisa para sobreviver a sua terra te fornece. 
-De inicio tente conseguir comida nas arvores frutíferas espalhadas pela sua propriedade.\n\n\tEstamina:  esse atributo mostra o quanto ainda tem de energia para realizar suas tarefas. Se chegar a 
-Zero você dorme (não importa onde esteja) e o dia vira.\n\n\tEsse jogo é baseado em escolhas e dependendo delas seu personagem vai gastar quantidades 
-especificas de estamina, então tome cuidado para não desmaiar de cansado, isso afetara 
-sua estamina no próximo dia de trabalho.\n\t`);
+console.log(`\n\n\tE é aqui que começamos sua nova vida;\n\nBreve tutorial:\n\nSTATUS\n\n\tFOME: Ao passar do dia e fazendo suas atividades diárias você vai ficando com fome. \nSe esse status chegar a Zero você perde. Mas não se preocupe, tudo que precisa para sobreviver a sua terra te fornece. \nDormir também gasta fome (-20 de fome), então CUIDADO!!! Não deixe esse status ficar baixo.
+De inicio tente conseguir comida nas arvores frutíferas espalhadas pela sua propriedade.
+Pode comer quantas vezes quiser, sem gastar estamina ou tempo, isso claro é claro, se tiver alimento em seu estoque.\n\n\tEstamina:  Esse atributo mostra o quanto ainda tem de energia para realizar suas tarefas. \nSe chegar a 
+Zero você dorme (não importa o que esteja fazendo) e o dia vira.\n\n\tEsse jogo é baseado em escolhas e dependendo delas seu personagem vai gastar quantidades especificas\n de estamina, que vai te fazer ir dormir. e gastar então tome cuidado para não desmaiar de cansado, isso afetara sua FOME no próximo dia de trabalho.\n\t`);
 
 continuar();
 
@@ -457,9 +454,7 @@ function escolhas(){
         
         }else if(resposta1 === 6){
             colher.comer();
-            }
-
-
+        }
 
 
     }else if (plantacaoEfazenda.areaLivre.length >= 1 && plantacaoEfazenda.sementes >= 1){
@@ -541,7 +536,7 @@ function escolhas(){
 
             console.log(`Você plantou uma SEMENTE, em 5 dias ela vai brotar\n`);
 
-         }else if (resposta2 === 6){
+        }else if (resposta2 === 6){
             tempo.passaTempoDormir(1);
         
         }else if(resposta2 === 7){
