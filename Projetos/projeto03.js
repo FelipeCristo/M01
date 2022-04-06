@@ -424,9 +424,9 @@ function escolhas(){
         plantacaoEfazenda.exibir();
 
         }else if (resposta1 === 2){
-            fazendeiro.estamina -= 40;
-            fazendeiro.fome -= 40;
-            tempo.passaTempo(5);
+            fazendeiro.estamina -= 20;
+            fazendeiro.fome -= 30;
+            tempo.passaTempo(4);
             tempo.exibeTempo();
             plantacaoEfazenda.areaLivre.push('')
             console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`);
@@ -435,13 +435,13 @@ function escolhas(){
             plantacaoEfazenda.exibir();
 
         }else if (resposta1 === 3){
-            fazendeiro.estamina -= 30;
-            fazendeiro.fome -= 25;
+            fazendeiro.estamina -= 40;
+            fazendeiro.fome -= 40;
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         plantacaoEfazenda.madeira += cortarMadeira;
         plantacaoEfazenda.arvoresCaidas -= 1;
         console.log(`você pegou ${cortarMadeira} madeiras!\n `);
-            tempo.passaTempo(2);
+            tempo.passaTempo(5);
             tempo.exibeTempo();
             fazendeiro.dormir();
             fazendeiro.exibir();
@@ -496,9 +496,9 @@ function escolhas(){
             plantacaoEfazenda.exibir();
 
         }else if (resposta2 === 2){
-            fazendeiro.estamina -= 40;
-            fazendeiro.fome -= 40;
-            tempo.passaTempo(5);
+            fazendeiro.estamina -= 20;
+            fazendeiro.fome -= 30;
+            tempo.passaTempo(4);
             tempo.exibeTempo();
             fazendeiro.dormir();
             plantacaoEfazenda.areaLivre.push('')
@@ -508,9 +508,9 @@ function escolhas(){
             
     
         }else if (resposta2 === 3){
-            fazendeiro.estamina -= 30;
-            fazendeiro.fome -= 25;
-            tempo.passaTempo(2);
+            fazendeiro.estamina -= 40;
+            fazendeiro.fome -= 40;
+            tempo.passaTempo(5);
             tempo.exibeTempo();
             fazendeiro.dormir();
             let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
@@ -585,9 +585,9 @@ function escolhas(){
         plantacaoEfazenda.exibir();
 
         }else if (resposta3 === 2){
-            fazendeiro.estamina -= 40;
-            fazendeiro.fome -= 40;
-            tempo.passaTempo(5);
+            fazendeiro.estamina -= 20;
+            fazendeiro.fome -= 30;
+            tempo.passaTempo(4);
             tempo.exibeTempo();
             fazendeiro.dormir();
             plantacaoEfazenda.areaLivre.push('')
@@ -596,13 +596,13 @@ function escolhas(){
             plantacaoEfazenda.exibir();
 
         }else if (resposta3 === 3){
-            fazendeiro.estamina -= 30;
-            fazendeiro.fome -= 25;
+            fazendeiro.estamina -= 40;
+            fazendeiro.fome -= 40;
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         plantacaoEfazenda.madeira += cortarMadeira;
         plantacaoEfazenda.arvoresCaidas -= 1;
         console.log(`você pegou ${cortarMadeira} madeiras!\n `);
-            tempo.passaTempo(2);
+            tempo.passaTempo(5);
             tempo.exibeTempo();
             fazendeiro.dormir();
             fazendeiro.exibir();
@@ -635,7 +635,7 @@ function escolhas(){
     
     if(plantacaoEfazenda.madeira >=10){
     console.log(`\nQual tarefa quer realizar agora? (digite o numero da resposta)
-    1 -	Consertar a cerca (-20 estamina, - 20 fome, -10 madeiras,  + 4 horas)
+    1 -	Consertar a cerca (-40 estamina, - 30 fome, -10 madeiras,  passa 4 horas)
     2 -	Cortar e limpar grama da área em volta da casa  em uma área 1m x 1m  (-30 estamina, - 25 fome, passa 2 horas)
     3 -	Cortar e Retirar Arvores Caidas (-40 estamina, -40 fome, passa 5 horas)
     4 -	Preparar solo em uma area 1m x 1m para plantar (-20 estamina, - 30 fome, passa 4 horas)
@@ -669,9 +669,9 @@ function escolhas(){
         plantacaoEfazenda.exibir();
 
         }else if (resposta4 === 3){
-        fazendeiro.estamina -= 30;
-        fazendeiro.fome -= 25;
-        tempo.passaTempo(2);
+        fazendeiro.estamina -= 40;
+        fazendeiro.fome -= 40;
+        tempo.passaTempo(5);
         tempo.exibeTempo();
         fazendeiro.dormir();
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
@@ -683,9 +683,9 @@ function escolhas(){
         plantacaoEfazenda.exibir();
 
         }else if (resposta4 === 4){
-        fazendeiro.estamina -= 40;
-        fazendeiro.fome -= 40;
-        tempo.passaTempo(5);
+        fazendeiro.estamina -= 20;
+        fazendeiro.fome -= 30;
+        tempo.passaTempo(4);
         tempo.exibeTempo();
         fazendeiro.dormir();
         plantacaoEfazenda.areaLivre.push('')
@@ -715,8 +715,8 @@ function escolhas(){
 
         let resposta5 = +prompt(`Nº: `);
         if (resposta5 === 1){
-            fazendeiro.estamina -= 40;
-            fazendeiro.fome -= 30;
+            fazendeiro.estamina -= 20;
+            fazendeiro.fome -= 20;
             tempo.passaTempo(4);
             tempo.exibeTempo();
             fazendeiro.dormir();      
@@ -735,6 +735,7 @@ function escolhas(){
             plantacaoEfazenda.exibir();
                 if(plantacaoEfazenda.cabanaConcerto >= 0){
                 plantacaoEfazenda.cabanaConcerto -= 1;
+                plantacaoEfazenda.madeira -=50;
                 console.log(`Você concertou a cabana, falta agora ${plantacaoEfazenda.cabanaConcerto} reparos a ser feito\n`);
                 }else if(plantacaoEfazenda.cabanaConcerto == 0){
                     console.log(`PAREBENS SUA CASA ESTA PRONTA E LINDA, não precisa de reparos\n`);
@@ -757,13 +758,13 @@ function escolhas(){
         plantacaoEfazenda.exibir();
 
         }else if (resposta5 === 4){
-            fazendeiro.estamina -= 30;
-            fazendeiro.fome -= 25;
+            fazendeiro.estamina -= 40;
+            fazendeiro.fome -= 40;
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         plantacaoEfazenda.madeira += cortarMadeira;
         plantacaoEfazenda.arvoresCaidas -= 1;
         console.log(`você pegou ${cortarMadeira} madeiras! `);
-            tempo.passaTempo(2);
+            tempo.passaTempo(5);
             tempo.exibeTempo();
             fazendeiro.dormir();
             fazendeiro.exibir();
