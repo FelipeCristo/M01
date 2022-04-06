@@ -142,7 +142,7 @@ let tempo = {
             this.hora -= 24;
             fazendeiro.estamina = 100;
             this.semente();
-            tempo.passaTempoDormir();
+            this.passaTempo();
         }
     },
 
