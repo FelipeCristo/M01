@@ -538,7 +538,6 @@ function escolhas(){
             tempo.passaTempo(2);
             tempo.exibeTempo();
             fazendeiro.dormir();
-            plantacaoEfazenda.sementes -= 1;
             plantacaoEfazenda.areaLivre.shift()
             plantacaoEfazenda.plantar();
             tempo.semente(tempo.dia);
