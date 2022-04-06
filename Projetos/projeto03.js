@@ -6,13 +6,18 @@ let fazendeiro = {
     nome: prompt('Qual seu nome? '),
     estamina: 100,
     fome: 100,
+
+
+
+
         exibir: function(){
             console.log(`\n
             STATUS DO PERSONAGEM:
 
             Nome: ${this.nome}
             Estamina: ${this.estamina}
-            Fome: ${this.fome}        
+            Fome: ${this.fome}
+                        
             `);
             
         },
@@ -101,10 +106,9 @@ let plantacaoEfazenda = {
         Área livre para plantacao: ${this.areaLivre.length}
         Gramas alta para cortar: ${this.gramaAlta}
         Arvores Caídas para remover: ${this.arvoresCaidas}
-        Lixo ainda espalhado: ${this.lixoEspalhado}
         Arvores disponiveis para colher frutas: ${this.arvoresFrutas}
         Cercas para concertar: ${this.cercaQuebrada}
-        plantacao Pronta Para Colher: ${this.prontoParaColher}
+        Plantacao Pronta Para Colher: ${this.prontoParaColher}
 
         `);
 
@@ -417,6 +421,7 @@ function escolhas(){
         colher.frutas += randFrutas
         fazendeiro.dormir();
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
 
         }else if (resposta1 === 2){
             fazendeiro.estamina -= 40;
@@ -427,6 +432,7 @@ function escolhas(){
             console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`);
             fazendeiro.dormir();
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta1 === 3){
             fazendeiro.estamina -= 30;
@@ -438,6 +444,7 @@ function escolhas(){
             tempo.exibeTempo();
             fazendeiro.dormir();
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta1 === 4){
         fazendeiro.estamina -= 30;
@@ -449,6 +456,7 @@ function escolhas(){
         plantacaoEfazenda.sementes += randsementes;
         console.log(`Você pegou ${randsementes} sementes\n`);                 
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
 
         }else if (resposta1 === 5){
             tempo.passaTempoDormir(1);
@@ -483,6 +491,7 @@ function escolhas(){
             console.log(`você pegou ${randFrutas} frutas!\n `);
             colher.frutas += randFrutas
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta2 === 2){
             fazendeiro.estamina -= 40;
@@ -493,6 +502,7 @@ function escolhas(){
             plantacaoEfazenda.areaLivre.push('')
             console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`);
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
             
     
         }else if (resposta2 === 3){
@@ -505,6 +515,7 @@ function escolhas(){
             plantacaoEfazenda.madeira += cortarMadeira;
             console.log(`você pegou ${cortarMadeira} madeiras!\n`);
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta2 === 4){
             fazendeiro.estamina -= 30;
@@ -516,6 +527,7 @@ function escolhas(){
             plantacaoEfazenda.sementes = plantacaoEfazenda.sementes + randsementes;
             console.log(`Você agora tem ${randsementes} sementes para plantantar\n`);  
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta2 === 5 ){
             fazendeiro.estamina -= 25;
@@ -528,6 +540,7 @@ function escolhas(){
             plantacaoEfazenda.plantar();
             tempo.semente(tempo.dia);
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
 
             console.log(`Você plantou uma SEMENTE, em 5 dias ela vai brotar\n`);
@@ -565,6 +578,7 @@ function escolhas(){
         console.log(`você pegou ${randFrutas} frutas! \n`);
         colher.frutas += randFrutas
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
 
         }else if (resposta3 === 2){
             fazendeiro.estamina -= 40;
@@ -575,6 +589,7 @@ function escolhas(){
             plantacaoEfazenda.areaLivre.push('')
             console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`);
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta3 === 3){
             fazendeiro.estamina -= 30;
@@ -586,6 +601,7 @@ function escolhas(){
             tempo.exibeTempo();
             fazendeiro.dormir();
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta3 === 4){
         fazendeiro.estamina -= 30;
@@ -596,7 +612,8 @@ function escolhas(){
         let randsementes = Math.floor(Math.random() * 2);
         plantacaoEfazenda.sementes += randsementes;
         console.log(`Você pegou ${randsementes} sementes\n`);
-        fazendeiro.exibir();                 
+        fazendeiro.exibir();  
+        plantacaoEfazenda.exibir();               
    
         }else if (resposta3 === 5){
             tempo.passaTempoDormir(1);
@@ -630,6 +647,7 @@ function escolhas(){
         plantacaoEfazenda.
         console.log(`Você gastou 10 madeiras para concertar a cerca\n`);
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
 
         }else if(resposta4 === 2){
         fazendeiro.estamina -= 30;
@@ -641,6 +659,7 @@ function escolhas(){
         plantacaoEfazenda.sementes += randsementes
         console.log(`Você agora tem ${randsementes} sementes para plantantar\n`);
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
 
         }else if (resposta4 === 3){
         fazendeiro.estamina -= 30;
@@ -653,6 +672,7 @@ function escolhas(){
         plantacaoEfazenda.madeira += cortarMadeira;
         tempo.passaTempo(2);
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
 
         }else if (resposta4 === 4){
         fazendeiro.estamina -= 40;
@@ -663,6 +683,7 @@ function escolhas(){
         plantacaoEfazenda.areaLivre.push('')
         console.log(`Você agora tem ${plantacaoEfazenda.areaLivre.length} de área livre para plantar\n`)
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
         
         }else if (resposta4 === 5){
         tempo.passaTempoDormir(1);
@@ -690,12 +711,12 @@ function escolhas(){
             fazendeiro.fome -= 30;
             tempo.passaTempo(4);
             tempo.exibeTempo();
-            fazendeiro.dormir();
-            
+            fazendeiro.dormir();      
             plantacaoEfazenda.madeira -=10;
             plantacaoEfazenda.cercaQuebrada -= 1;
             console.log(`Você gastou 10 madeiras para concertar a cerca\n`);
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
     
         }else if(resposta5 === 2){
             fazendeiro.estamina -= 60;
@@ -703,6 +724,7 @@ function escolhas(){
             tempo.passaTempo(10);
             tempo.exibeTempo();
             fazendeiro.dormir();
+            plantacaoEfazenda.exibir();
                 if(plantacaoEfazenda.cabanaConcerto >= 0){
                 plantacaoEfazenda.cabanaConcerto -= 1;
                 console.log(`Você concertou a cabana, falta agora ${plantacaoEfazenda.cabanaConcerto} reparos a ser feito\n`);
@@ -724,6 +746,7 @@ function escolhas(){
         console.log(`você pegou ${randFrutas} frutas! `);
         colher.frutas += randFrutas
         fazendeiro.exibir();
+        plantacaoEfazenda.exibir();
 
         }else if (resposta5 === 4){
             fazendeiro.estamina -= 30;
@@ -735,6 +758,7 @@ function escolhas(){
             tempo.exibeTempo();
             fazendeiro.dormir();
             fazendeiro.exibir();
+            plantacaoEfazenda.exibir();
 
         }else if (resposta5 === 5){
             tempo.passaTempoDormir(1);
