@@ -136,6 +136,7 @@ let tempo = {
         if (this.hora >= 24){
             this.dia++
             this.hora -= 24;
+            fazendeiro.estamina = 100;
             this.semente();
             
         }
@@ -523,16 +524,11 @@ function escolhas(){
             tempo.exibeTempo();
             fazendeiro.dormir();
             plantacaoEfazenda.sementes -= 1;
-           plantacaoEfazenda.areaLivre.shift()
+            plantacaoEfazenda.areaLivre.shift()
             plantacaoEfazenda.plantar();
             tempo.semente(tempo.dia);
             fazendeiro.exibir();
 
-
-            //COLOCAR PARA COLHER EM 5 DIAS
-            //TENHO QUE GRAVAR O DIA QUE PLANTEI (DIA ATUAL DA plantacao)
-            //DIMINUIR O DIA ATUAL (O QUE VAI PASSANDO) PELO DIA QUE DEMORA PARA COLHER (-5)
-            //CONFIRMAR O PARAMETRO PARA COLHER
 
             console.log(`Você plantou uma SEMENTE, em 5 dias ela vai brotar\n`);
 
