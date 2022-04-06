@@ -206,42 +206,42 @@ let colher ={
         plantacaoEfazenda.areaLivre.shift();
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
-        console.log(`Você pegou ${randsementes} sementes`);
+        console.log(`Você pegou ${randsementes} sementes e colheu ${this.beterraba} beterraba`);
 
     }else if (colheita === 1){
         colher.batata +=
         plantacaoEfazenda.areaLivre.shift();
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
-        console.log(`Você pegou ${randsementes} sementes`);
+        console.log(`Você pegou ${randsementes} sementes e colheu ${this.batata} batata`);
 
     }else if(colheita === 2){
         colher.cenoura+=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
-        console.log(`Você pegou ${randsementes} sementes`);
+        console.log(`Você pegou ${randsementes} sementes  e colheu ${this.cenoura} cenoura`);
 
     }else if (colheita === 3){
         colher.tomate+=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
-        console.log(`Você pegou ${randsementes} sementes`);
+        console.log(`Você pegou ${randsementes} sementes  e colheu ${this.tomate} tomate`);
 
     }else if(colheita === 4){
         colher.repolho+=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
-        console.log(`Você pegou ${randsementes} sementes`);
+        console.log(`Você pegou ${randsementes} sementes  e colheu ${this.repolho} repolho`);
 
     }else if (colheita === 5){
         colher.alface +=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
-        console.log(`Você pegou ${randsementes} sementes`);
+        console.log(`Você pegou ${randsementes} sementes  e colheu ${this.alface} alface`);
     }
 
     //ALIMENTAÇÃO
