@@ -140,7 +140,6 @@ let tempo = {
         if (this.hora >= 24){
             this.dia++
             this.hora -= 24;
-            fazendeiro.estamina = 100;
             this.semente();
             
         }
@@ -150,7 +149,7 @@ let tempo = {
         
         this.hora += tempo
 
-        if (fazendeiro.estamina <= 0||dormir==1 || this.hora >= 24){
+        if (fazendeiro.estamina <= 0||dormir==1){
             console.log('Estava passando da hora de dormir você foi para casa descansar');
             this.dia++
             this.hora = 7
