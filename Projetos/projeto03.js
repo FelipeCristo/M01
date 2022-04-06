@@ -92,7 +92,6 @@ let plantacaoEfazenda = {
     madeira: 0,    
     gramaAlta: 100,
     arvoresCaidas: 100,
-    lixoEspalhado: 100,
     arvoresFrutas:50,
     cercaQuebrada: 10,
     prontoParaColher:0,
@@ -103,6 +102,7 @@ let plantacaoEfazenda = {
         TAREFAS DISPONIVEIS:
 
         Semente para plantar:${this.sementes}
+        Madeiras: ${this.madeira}
         Área livre para plantacao: ${this.areaLivre.length}
         Gramas alta para cortar: ${this.gramaAlta}
         Arvores Caídas para remover: ${this.arvoresCaidas}
@@ -439,6 +439,7 @@ function escolhas(){
             fazendeiro.fome -= 25;
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         plantacaoEfazenda.madeira += cortarMadeira;
+        plantacaoEfazenda.arvoresCaidas -= 1;
         console.log(`você pegou ${cortarMadeira} madeiras!\n `);
             tempo.passaTempo(2);
             tempo.exibeTempo();
@@ -454,6 +455,7 @@ function escolhas(){
         fazendeiro.dormir();
         let randsementes = Math.floor(Math.random() * 2);
         plantacaoEfazenda.sementes += randsementes;
+        plantacaoEfazenda.gramaAlta -=1;
         console.log(`Você pegou ${randsementes} sementes\n`);                 
         fazendeiro.exibir();
         plantacaoEfazenda.exibir();
@@ -513,6 +515,7 @@ function escolhas(){
             fazendeiro.dormir();
             let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
             plantacaoEfazenda.madeira += cortarMadeira;
+            plantacaoEfazenda.arvoresCaidas -= 1;
             console.log(`você pegou ${cortarMadeira} madeiras!\n`);
             fazendeiro.exibir();
             plantacaoEfazenda.exibir();
@@ -524,6 +527,7 @@ function escolhas(){
             tempo.exibeTempo();
             fazendeiro.dormir();
             let randsementes = Math.floor(Math.random() * 2);
+            plantacaoEfazenda.gramaAlta -=1;
             plantacaoEfazenda.sementes = plantacaoEfazenda.sementes + randsementes;
             console.log(`Você agora tem ${randsementes} sementes para plantantar\n`);  
             fazendeiro.exibir();
@@ -596,6 +600,7 @@ function escolhas(){
             fazendeiro.fome -= 25;
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         plantacaoEfazenda.madeira += cortarMadeira;
+        plantacaoEfazenda.arvoresCaidas -= 1;
         console.log(`você pegou ${cortarMadeira} madeiras!\n `);
             tempo.passaTempo(2);
             tempo.exibeTempo();
@@ -611,6 +616,7 @@ function escolhas(){
         fazendeiro.dormir();
         let randsementes = Math.floor(Math.random() * 2);
         plantacaoEfazenda.sementes += randsementes;
+        plantacaoEfazenda.gramaAlta -=1;
         console.log(`Você pegou ${randsementes} sementes\n`);
         fazendeiro.exibir();  
         plantacaoEfazenda.exibir();               
@@ -657,6 +663,7 @@ function escolhas(){
         fazendeiro.dormir();
         let randsementes = Math.floor(Math.random() * 2);
         plantacaoEfazenda.sementes += randsementes
+        plantacaoEfazenda.gramaAlta -=1;
         console.log(`Você agora tem ${randsementes} sementes para plantantar\n`);
         fazendeiro.exibir();
         plantacaoEfazenda.exibir();
@@ -670,6 +677,7 @@ function escolhas(){
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         console.log(`você pegou ${cortarMadeira} madeiras! \n`);
         plantacaoEfazenda.madeira += cortarMadeira;
+        plantacaoEfazenda.arvoresCaidas -= 1;
         tempo.passaTempo(2);
         fazendeiro.exibir();
         plantacaoEfazenda.exibir();
@@ -753,6 +761,7 @@ function escolhas(){
             fazendeiro.fome -= 25;
         let cortarMadeira = Math.floor(Math.random() * 4) +1 ;
         plantacaoEfazenda.madeira += cortarMadeira;
+        plantacaoEfazenda.arvoresCaidas -= 1;
         console.log(`você pegou ${cortarMadeira} madeiras! `);
             tempo.passaTempo(2);
             tempo.exibeTempo();
