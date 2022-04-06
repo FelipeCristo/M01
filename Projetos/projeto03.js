@@ -200,44 +200,44 @@ let colher ={
     frutas: 0,
 
     randColher: function(){
-    Math.floor(Math.random() * 6)
-    if (this.randColher === 0){
-        colher.beterraba++
+    let colheita = Math.floor(Math.random() * 6)
+    if (colheita === 0){
+        colher.beterraba +=
         plantacaoEfazenda.areaLivre.shift();
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
         console.log(`Você pegou ${randsementes} sementes`);
 
-    }else if (this.randColher === 1){
-        colher.batata++
+    }else if (colheita === 1){
+        colher.batata +=
         plantacaoEfazenda.areaLivre.shift();
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
         console.log(`Você pegou ${randsementes} sementes`);
 
-    }else if(this.randColher === 2){
-        colher.cenoura++
+    }else if(colheita === 2){
+        colher.cenoura+=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
         console.log(`Você pegou ${randsementes} sementes`);
 
-    }else if (this.randColher === 3){
-        colher.tomate++
+    }else if (colheita === 3){
+        colher.tomate+=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
         console.log(`Você pegou ${randsementes} sementes`);
 
-    }else if(this.randColher === 4){
-        colher.repolho++
+    }else if(colheita === 4){
+        colher.repolho+=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
         console.log(`Você pegou ${randsementes} sementes`);
 
-    }else if (this.randColher === 5){
-        colher.alface++
+    }else if (colheita === 5){
+        colher.alface +=
         plantacaoEfazenda.areaLivre.shift()
         let randsementes = Math.floor(Math.random() * 3);
         plantacaoEfazenda.sementes += randsementes
