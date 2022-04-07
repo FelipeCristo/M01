@@ -32,7 +32,6 @@ let fazendeiro = {
 console.log();
 
 
-
 console.log(`\n\tVocê é um trabalhador(a) da cidade grande. Cada dia de sua vida é sempre a mesma coisa no
 escritório, com seu chefe chato e ingrato, seus colegas de trabalho apáticos e com comportamentos robóticos, 
 na cidade poluída e barulhenta e em seu apartamento apertado e de aluguel caro.\n\n\tUm certo domingo seus 
@@ -153,11 +152,11 @@ let tempo = {
             console.log('Estava passando da hora de dormir você foi para casa descansar');
             this.dia++
             this.hora = 7
-            fazendeiro.fome -= 20;            
+            fazendeiro.fome = 100;            
             fazendeiro.estamina = 100;
             tempo.exibeTempo();
             fazendeiro.dormir();
-            this.semente();
+            tempo.semente();
             
                 
         }
