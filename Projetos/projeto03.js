@@ -152,7 +152,7 @@ let tempo = {
             console.log('Estava passando da hora de dormir você foi para casa descansar');
             this.dia++
             this.hora = 7
-            fazendeiro.fome = 100;            
+            fazendeiro.fome -= 20;            
             fazendeiro.estamina = 100;
             tempo.exibeTempo();
             fazendeiro.dormir();
